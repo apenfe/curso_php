@@ -7,5 +7,11 @@
 
 <body>
 
+<?php
+    echo "bienvenidos al curso de php <br>";
+    echo "hola alumnos <br>";
+    echo "hasta el proximo video";
+?>
+
 </body>
 </html>
