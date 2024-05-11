@@ -13,7 +13,17 @@ echo "bienvenidos al curso de php <br>"; // imprime y hace un salto de linea <br
 
 echo "hola alumnos <br>";
 
-echo "hasta el proximo video";
+/*
+ * comentario largo
+ */
+
+    $nombre="juan";
+    $edad=29;
+
+    print $nombre."<br>"; // CONCATENACION CON PRINT .
+
+echo "Alumno $nombre, Edad: $edad<br>";
+echo $nombre, $edad;
 
 ?>
 
