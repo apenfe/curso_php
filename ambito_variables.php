@@ -1,26 +1,27 @@
 <!doctype html>
+
 <html>
-<head>
-    <meta charset="utf=8">
-    <title>Documento sin titulo</title>
-</head>
+    <head>
+        <meta charset="utf=8">
+        <title>Documento sin titulo</title>
+    </head>
 
-<body>
+    <body>
 
-<?php
+        <?php
 
-$nombre = "Juan";
+        $nombre = "Juan";
 
-function dameNombre(){
-    global $nombre;
+        function dameNombre(){
+            global $nombre;
 
-    $nombre = "mi nombre es ". $nombre;
-}
+            $nombre = "mi nombre es ". $nombre;
+        }
 
-dameNombre();
-echo $nombre ;
+        dameNombre();
+        echo $nombre ;
 
-?>
+        ?>
 
-</body>
+    </body>
 </html>
