@@ -8,7 +8,7 @@
 <body>
 
 <?php
-include ("funciones.php");
+include("funciones.php");
     dameDatos();
 ?>
 
