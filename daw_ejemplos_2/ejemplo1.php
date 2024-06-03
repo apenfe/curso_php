@@ -1,26 +1,27 @@
 <html>
 
-<head>
+    <head>
 
-    <title>Ejemplo 1 (formulario)</title>
+        <title>Ejemplo 1 (formulario)</title>
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-<h2>Datos recogidos</h2>
-<?php
+    <h2>Datos recogidos</h2>
 
-$nombre = $_GET["nombre"];
-$apellidos = $_GET["apellidos"];
-$edad = $_GET["edad"];
+        <?php
 
-echo "Nombre: $nombre <br>";
-echo "Apellidos: $apellidos <br>";
-echo "Edad: $edad <br>";
+        $nombre = $_GET["nombre"];
+        $apellidos = $_GET["apellidos"];
+        $edad = $_GET["edad"];
 
-?>
+        echo "Nombre: $nombre <br>";
+        echo "Apellidos: $apellidos <br>";
+        echo "Edad: $edad <br>";
 
-</body>
+        ?>
+
+    </body>
 
 </html>
