@@ -2,30 +2,22 @@
 
 <head>
 
-    <title>Ejemplo 8 (arrays)</title>
+    <title>Ejemplo 1 (formulario)</title>
 
 </head>
 
 <body>
 
+<h2>Datos recogidos</h2>
 <?php
 
-function mostrarArray($cosas) {
-    $texto = "<h3> listado de las ".count($cosas)." cosas.</h3>";
+$nombre = $_GET["nombre"];
+$apellidos = $_GET["apellidos"];
+$edad = $_GET["edad"];
 
-    $texto.= "<ul>";
-
-    for ($i = 0; $i < count($cosas); $i++) {
-        $texto .= "<li>".$cosas[$i]."</li>";
-    }
-
-    $texto.= "</ul>";
-    return $texto;
-}
-
-$cosas = array("Chocolate",42,true,"23",34.44);
-
-echo mostrarArray($cosas);
+echo "Nombre: $nombre <br>";
+echo "Apellidos: $apellidos <br>";
+echo "Edad: $edad <br>";
 
 ?>
 
