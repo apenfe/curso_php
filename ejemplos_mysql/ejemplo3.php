@@ -23,6 +23,13 @@
         }
 
         $sql = "SELECT * FROM alumno";
+
+        if(isset($_GET["busqueda"]) && strlen(trim($_GET["busqueda"]))>0){
+            $busqueda = trim($_GET["busqueda"]);
+
+            $sql .= " WHERE (nombre LIKE '%".$busqueda."%' OR apellido1 LIKE '%".$busqueda."%' OR dni LIKE '%".$busqueda."%')";
+        }
+
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -39,7 +46,7 @@
 
                 echo "<tr>";
                 echo "<td>".$row["nombre"]."</td>";
-                echo "<td>".$row["apellido1"]." ".$row["apellido1"]."</td>";
+                echo "<td>".$row["apellido1"]." ".$row["apellido2"]."</td>";
                 echo "<td>".$row["dni"]."</td>";
             
                 echo "</tr>";
