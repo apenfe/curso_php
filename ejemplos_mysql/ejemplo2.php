@@ -31,8 +31,8 @@
             echo "<tr>";
             echo "<th>Nombre</th>";
             echo "<th>Apellidos</th>";
-            echo "<th>DNI</th>;
-            //echo "<th>Email</th>;
+            echo "<th>DNI</th>";
+         
             echo "</tr>";
             // output data of each row
             while($row = $result->fetch_assoc()) {
@@ -41,7 +41,7 @@
                 echo "<td>".$row["nombre"]."</td>";
                 echo "<td>".$row["apellido1"]." ".$row["apellido1"]."</td>";
                 echo "<td>".$row["dni"]."</td>";
-                echo "<td>".$row["email"].</td>";
+            
                 echo "</tr>";
                 
             }
