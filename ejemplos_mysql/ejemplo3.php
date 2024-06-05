@@ -26,8 +26,25 @@
 
         if(isset($_GET["busqueda"]) && strlen(trim($_GET["busqueda"]))>0){
             $busqueda = trim($_GET["busqueda"]);
+            $terminos =explode(" ", $busqueda);
+            $sql .= " WHERE ";
 
-            $sql .= " WHERE (nombre LIKE '%".$busqueda."%' OR apellido1 LIKE '%".$busqueda."%' OR dni LIKE '%".$busqueda."%')";
+            for ($i=0; $i < count($terminos); $i++) {
+
+                if(strlen($terminos[$i])>0){
+
+                    $sql .= " (nombre LIKE '%".$terminos[$i]."%' OR apellido1 LIKE '%".$terminos[$i]."%' OR dni LIKE '%".$terminos[$i]."%') ";
+
+                    if($i<(count($terminos)-1)){
+
+                        $sql .= " OR ";
+
+                    }
+
+                }
+
+            }
+
         }
 
         $result = $conn->query($sql);
