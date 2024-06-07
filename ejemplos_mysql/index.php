@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <a class="btn btn-primary" href="producto.php">Ver producto</a>
+                    <a class="btn btn-primary" href="productos.php">Ver producto</a>
                 </div>
 
                 <div class="col-sm-3">
