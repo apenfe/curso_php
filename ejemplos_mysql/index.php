@@ -1,3 +1,9 @@
+<?php
+
+include "seguridad.php";
+
+?>
+
 <html>
 
     <head>
@@ -11,6 +17,10 @@
     <body>
 
         <div class="container text-center">
+
+            <?php
+                echo "<div>Bienvenido, ".$_SESSION["username"]."</div>";
+            ?>
 
             <h1>Principal</h1>
 
