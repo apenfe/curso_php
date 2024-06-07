@@ -2,12 +2,18 @@
 
     <head>
 
-        <title>Ejemplo 3 (mysql)</title>
+        <title>Alumnos</title>
         <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>
+
+    <h1>Listado de alumnos</h1>
+
+    <div class="text-left">
+        <a href="index.php">Volver atrás</a>
+    </div>
 
     <?php
         $servername = "r2d2.iescierva.net";
@@ -23,29 +29,6 @@
         }
 
         $sql = "SELECT * FROM alumno";
-
-        if(isset($_GET["busqueda"]) && strlen(trim($_GET["busqueda"]))>0){
-            $busqueda = trim($_GET["busqueda"]);
-            $terminos =explode(" ", $busqueda);
-            $sql .= " WHERE ";
-
-            for ($i=0; $i < count($terminos); $i++) {
-
-                if(strlen($terminos[$i])>0){
-
-                    $sql .= " (nombre LIKE '%".$terminos[$i]."%' OR apellido1 LIKE '%".$terminos[$i]."%' OR dni LIKE '%".$terminos[$i]."%') ";
-
-                    if($i<(count($terminos)-1)){
-
-                        $sql .= " OR ";
-
-                    }
-
-                }
-
-            }
-
-        }
 
         $result = $conn->query($sql);
 
