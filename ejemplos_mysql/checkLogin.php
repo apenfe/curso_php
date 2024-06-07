@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
     die();
 
 } else {
-    header("Location: login.php");
+    header("Location: login.php?login=error");
     die();
 }
 

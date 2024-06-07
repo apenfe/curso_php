@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['logged']) || $_SESSION['logged'] == 1){
+    header('Location: index.php');
+    die();
+}
+?>
 <html>
 
 <head>
@@ -47,6 +54,12 @@
         </form>
 
     </div>
+
+    <?php
+    if(isset($_GET['login']) && strcmp($_GET["login"],"error") == 0){
+        echo '<div class="alert alert-danger">Nombre de usuario o contraseña incorrectos</div>';
+    }
+    ?>
 
 </div>
 
